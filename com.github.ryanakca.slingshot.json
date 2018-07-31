@@ -17,7 +17,8 @@
     "finish-args": [
         "--socket=x11",
         "--share=ipc",
-        "--device=dri"
+        "--device=dri",
+        "--share=network"
     ],
     "cleanup": [
         "/include",
