@@ -3,6 +3,10 @@
 <component type="desktop">
   <id>slingshot.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
+
+  <name>Slingshot</name>
+  <summary>2D space shooting game with gravity</summary>
+
   <description>
     <p>
       Slingshot is a two dimensional, turn based simulation-strategy game set in the gravity fields of several planets. It is a highly addictive game, and never the same from round to round due to its randomly generated playing fields.
