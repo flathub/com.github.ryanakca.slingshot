@@ -1,19 +1,12 @@
 {
     "app-id": "com.github.ryanakca.slingshot",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
+    "runtime-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-appdata-file": "slingshot.appdata.xml",
     "rename-desktop-file": "slingshot.desktop",
     "rename-icon": "slingshot",
     "command": "slingshot",
-    "build-options": {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g",
-        "env": {
-            "V": "1"
-        }
-    },
     "finish-args": [
         "--socket=x11",
         "--share=ipc",
@@ -31,6 +24,7 @@
         "*.a"
     ],
     "modules": [
+        "shared-modules/python2.7/python-2.7.json",
         "shared-modules/pygame/pygame-1.9.3.json",
         {
             "name": "pygame-python2",
