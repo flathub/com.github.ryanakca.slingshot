@@ -49,11 +49,17 @@
                 {
                     "type": "file",
                     "path": "slingshot.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "icon128x128.png"
                 }
             ],
             "post-install": [
                 "mkdir -p /app/share/icons/hicolor/64x64/apps",
                 "cp src/slingshot/data/icon64x64.png /app/share/icons/hicolor/64x64/apps/slingshot.png",
+                "mkdir -p /app/share/icons/hicolor/128x128/apps",
+                "cp icon128x128.png /app/share/icons/hicolor/128x128/apps/slingshot.png",
                 "mkdir -p /app/share/metainfo",
                 "cp slingshot.appdata.xml /app/share/metainfo"
             ]
