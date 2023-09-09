@@ -1,19 +1,12 @@
 {
     "app-id": "com.github.ryanakca.slingshot",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-appdata-file": "slingshot.appdata.xml",
     "rename-desktop-file": "slingshot.desktop",
     "rename-icon": "slingshot",
     "command": "slingshot",
-    "build-options": {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g",
-        "env": {
-            "V": "1"
-        }
-    },
     "finish-args": [
         "--socket=x11",
         "--share=ipc",
