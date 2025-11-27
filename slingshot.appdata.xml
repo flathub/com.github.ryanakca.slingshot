@@ -78,4 +78,9 @@
   <developer_name>Ryan Kavanagh</developer_name>
 
   <url type="bugtracker">https://github.com/ryanakca/slingshot/issues</url>
+  <keywords>
+    <keyword>space shooter</keyword>
+    <keyword>gravity game</keyword>
+    <keyword>turn based strategy</keyword>
+  </keywords>
 </component>
