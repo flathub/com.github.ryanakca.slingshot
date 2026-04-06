@@ -1,7 +1,7 @@
 {
     "app-id": "com.github.ryanakca.slingshot",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-appdata-file": "slingshot.appdata.xml",
     "rename-desktop-file": "slingshot.desktop",
@@ -21,18 +21,12 @@
         "--share=network"
     ],
     "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/lib/python3.5",
-        "/lib64/pkgconfig",
-        "/share/aclocal",
-        "/share/info",
-        "/share/man",
-        "*.a"
+        "/include"
     ],
     "modules": [
-        "shared-modules/python2.7/python-2.7.json",
-        "pygame-python2-1.9.4.json",
+        "shared-modules/SDL2/SDL2_ttf.json",
+        "shared-modules/SDL2/SDL2_image.json",
+        "python3-pygame.json",
         {
             "name": "slingshot",
             "buildsystem": "simple",
@@ -47,21 +41,21 @@
                     "sha256": "13d950b1ae4650c9710aeba85b59b05cdd5c697b698b04eb0d0be3f7f662a6aa"
                 },
                 {
+                    "type": "patch",
+                    "path": "port-to-Python-3.patch"
+                },
+                {
                     "type": "file",
                     "path": "slingshot.appdata.xml"
                 },
                 {
                     "type": "file",
-                    "path": "icon128x128.png"
+                    "path": "slingshot.png"
                 }
             ],
             "post-install": [
-                "mkdir -p /app/share/icons/hicolor/64x64/apps",
-                "cp src/slingshot/data/icon64x64.png /app/share/icons/hicolor/64x64/apps/slingshot.png",
-                "mkdir -p /app/share/icons/hicolor/128x128/apps",
-                "cp icon128x128.png /app/share/icons/hicolor/128x128/apps/slingshot.png",
-                "mkdir -p /app/share/metainfo",
-                "cp slingshot.appdata.xml /app/share/metainfo"
+                "install -Dm644 slingshot.png -t /app/share/icons/hicolor/256x256/apps/",
+                "install -Dm644 slingshot.appdata.xml -t /app/share/metainfo/"
             ]
         }
     ]
