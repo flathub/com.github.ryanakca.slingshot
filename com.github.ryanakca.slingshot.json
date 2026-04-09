@@ -21,7 +21,10 @@
         "--share=network"
     ],
     "cleanup": [
-        "/include"
+        "/include",
+        "/lib/python3.*/*/pygame/tests", 
+        "/lib/python3.*/*/pygame/examples", 
+        "/lib/python3.*/*/pygame/docs"        
     ],
     "modules": [
         "shared-modules/SDL2/SDL2_ttf.json",
